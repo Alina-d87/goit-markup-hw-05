@@ -1,0 +1,160 @@
+:root {
+    --blue-logo: rgba(33, 150, 243, 1);
+    --blue-btn: rgba(24, 140, 232, 1);
+
+    --black-logo: rgba(0, 0, 0, 1);
+    --black-text: rgba(33, 33, 33, 1);
+    
+    --greey: rgba(117, 117, 117, 1);
+    --greey-op60: rgba(255, 255, 255, 0.6);
+    
+    --white-text: rgba(255, 255, 255, 1);
+
+    --background-black: rgba(47, 48, 58, 1);
+
+    --border-white-bottom: rgba(236, 236, 236, 1);
+    --border-head: #ECECEC;
+
+    --background-komanda: #F5F4FA;
+
+    --background-cart: #FFFFFF;
+
+    --border-cart: #EEEEEE;
+
+    --fon-links: rgba(255, 255, 255, 0.1);
+
+    --hover-befor-folio: rgba(33, 150, 243, 0.9);
+
+    --cubik: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {font-family: 'Roboto', sans-serif;margin: 0; padding: 0;}
+
+.container { width: 1200px; padding: 0px 15px; margin: 0 auto;}
+
+img {display: block; max-width: 100%; height: auto;}
+
+a {text-decoration: none;}
+
+/*шапка*/
+
+.body-head { width: 100%; border-bottom: 1px  solid var(--border-head);}
+ 
+.body-nav, .logotip, .nav-styd, .info {display: flex;}
+
+.body-nav {justify-content: space-between; align-items: center;}
+
+.nav-styd li:not(:first-child) {margin-left: 50px;}
+
+.info li:last-child {margin-left: 50px;}
+
+.logotip { font-family: 'Raleway', sans-serif; color: var(--black-logo); font-weight: 700; font-style: normal; font-size: 26px; line-height: 31px; letter-spacing: 0.03em;}
+
+.logo { font-family: 'Oleo Seript', sans-serif; color: var(--blue-logo);font-weight: 400; font-style: normal; font-size: 26px; line-height: 31px; letter-spacing: 0.03em;}
+
+.nav-styd { height: 48px; margin-top: 32px; font-weight: 500; font-style: normal; font-size: 14px; line-height: 16px; letter-spacing: 0.02em;} 
+
+.st { color: var(--black-text);}
+
+.styd-li { color: var(--blue-logo);}
+
+.st:hover, .st:focus, .styd-li:hover, .styd-li:focus { color: var(--blue-logo);}
+
+.li-p { position: relative;}
+
+.li-p::after { content: ""; display: inline-block; position: absolute; bottom: 0; right: 0; width: 100%; height: 4px; border-radius: 2px; background-color: var(--blue-logo); opacity: 0; transform: opacity 250ms var(--cubik);}
+
+.li-p:hover:after { opacity: 1;}
+
+.info { font-weight: 500; font-style: normal; font-size: 14px; line-height: 16px; letter-spacing: 0.02em;}
+
+.mail, .tel-p { color: var(--greey);}
+
+.mail:hover, mail:focus, .tel-p:hover, .tel-p:focus { text-decoration: underline; color: var(--blue-logo);}
+
+.e-mail { content: ""; width: 16px; height: 12px; margin-right: 10px;}
+
+.smartphone { content: ""; width: 10px; height: 12px; margin-right: 10px;}
+
+.icon-e-mail:hover, 
+.icon-e-mail:focus, 
+.icon-smartphone:hover, 
+.icon-smartphone:focus {fill: var(--blue-logo);}
+
+/*слот*/
+
+.visually-hidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px;}
+ 
+.block, .btn, .list {display: flex;}
+
+.block { padding-top: 94px; padding-bottom: 94px;}
+
+.btn { justify-content: center; padding-top: 94px; padding-bottom: 50px;}
+
+.btn li {margin-left: 8px;}
+
+.btn-vse, .btn-web { font-family: 'Roboto', sans-serif; font-weight: 500; font-style: normal; font-size: 16px; line-height: 24px; letter-spacing: 0.03em; text-align: center;  border-radius: 4px; height: 38px; cursor: pointer;}
+
+.btn-vse {color: var(--white-text); background-color: var(--blue-logo);  width: 73px; box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);}
+
+.btn-web { color: var(--black-text); font-family: 'Roboto', sans-serif; background-color: var(--background-komanda);}
+
+.veb {width: 128px;}
+
+.aplication {width: 145px;}
+
+.dezine {width: 103px;}
+
+.market {width: 130px;}
+
+.list { flex-wrap: wrap; flex-basis: calc(100% / 3 - 30px); justify-content: space-between;}
+
+images { width: 370px; height: 294px;}
+
+.list-cart { position: relative; width: 370px; background-color: var(--background-cart); margin-bottom: 30px; margin-right: 30px; cursor: pointer;}
+
+.list-cart:nth-child(3n+3) { margin-right: -30px;}
+
+.cart-thumb { position: relative; overflow: hidden;}
+
+.cart-overlay { position: absolute; width: 100%; height: 294px; top: 0; right: 0; background-color: var(--hover-befor-folio); transform: translateY(100%); transition: transform 250ms var(--cubik);}
+
+.cart:hover .cart-overlay { transform: translateY(0);}
+
+.tehno { font-size: 18px; font-style: normal; font-weight: 400; line-height: 28px; letter-spacing: 0.03em; text-align: left; color: var(--white-text);}
+
+.tehno { position: absolute; top: 63px; left: 24px; right: 24px; bottom: 63px; display: flex;}
+
+.border {border-right: 1px solid var(--border-cart); border-bottom: 1px solid var(--border-cart); border-left: 1px solid var(--border-cart); box-sizing: border-box;}
+
+.list-poster {color: var(--black-text); font-weight: 700; font-style: normal; font-size: 18px; line-height: 36px; letter-spacing: 0.06em; margin-bottom: 4px; padding-left: 24px;}
+
+.list-web {color: var(--greey); font-weight: 400; font-style: normal; font-size: 16px; line-height: 30px; letter-spacing: 0.03em; padding-left: 24px; padding-bottom: 20px;}
+
+/*footer v styd css//*/
+
+footer {width: 100%; height: 252px; background-color: var(--background-black);}
+
+.logofoter { padding-top: 60px; color: var(--white-text);}
+
+.adres {font-weight: 400; font-style: normal; font-size: 14px; line-height: 24px; color: var(--white-text); margin-top: 20px;}
+
+.cont {font-weight: 400; font-style: normal; font-size: 14px; line-height: 24px; color: var(--greey-op60); margin-top: 9px; padding-bottom: 60px;}
+
+.foot-h { font-style: normal; font-weight: bold; font-size: 14px; line-height: 16px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--background-cart); margin-bottom: 20px; padding-top: 72px;}
+
+.flex-container,
+.foot-link {display: flex;}
+
+.links {display: block; margin-left: 70px;}
+
+.icon-links { margin-right: 10px; border-radius: 50%; background-color: var(--fon-links);}
+
+.in-icon,
+.icon-tw,
+.icon-fb,
+.icon-lin {width: 20px; height: 20px; fill: var(--background-cart);}
+
+.icon-links:hover {background-color: var(--blue-logo);}
+
+.inet { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; cursor: pointer;}
