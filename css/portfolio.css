@@ -91,7 +91,9 @@ a {text-decoration: none;}
 
 .btn { justify-content: center; padding-top: 94px; padding-bottom: 50px;}
 
-.btn li {margin-left: 8px;}
+.btn li { margin-left: 8px;}
+
+.btn li:first-child { margin-left: -8px;}
 
 .btn-vse, .btn-web { font-family: 'Roboto', sans-serif; font-weight: 500; font-style: normal; font-size: 16px; line-height: 24px; letter-spacing: 0.03em; text-align: center;  border-radius: 4px; height: 38px; cursor: pointer;}
 
@@ -111,7 +113,7 @@ a {text-decoration: none;}
 
 images { width: 370px; height: 294px;}
 
-.list-cart { position: relative; width: 370px; background-color: var(--background-cart); margin-bottom: 30px; margin-right: 30px; cursor: pointer;}
+.list-cart { position: relative; width: 370px; background-color: var(--background-cart); margin-bottom: 30px; margin-right: 0px; cursor: pointer;}
 
 .list-cart:nth-child(3n+3) { margin-right: -30px;}
 

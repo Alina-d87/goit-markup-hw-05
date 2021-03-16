@@ -57,7 +57,7 @@ img { display: block; max-width: 100%; height: auto;}
 
 .logotip { font-family: Raleway, sans-serif; color: var(--black-logo); font-style: normal; font-size: 26px; font-weight: 700; line-height: 31px;}
 
-.logotip:hover { text-decoration: underline var(--blue-logo); transition: color 250ms var(--cubik);}
+.logotip:hover { transition: color 250ms var(--cubik);}
 
 .logo { font-family: 'Oleo Seript', sans-serif; color: var(--blue-logo); font-style: normal; font-size: 26px; font-weight: 400; line-height: 31px;}
 
@@ -99,13 +99,11 @@ img { display: block; max-width: 100%; height: auto;}
 
 .efect-h { font-weight: 900; font-style: normal; font-size: 44px; text-transform: uppercase; line-height: 60px; color: var(--white-text); margin-bottom: 34px; padding-top: 200px; padding-left: 252px; padding-right: 252px; letter-spacing: 0.06em;}
 
-.efect-h:hover {text-decoration: underline var(--blue-logo);}
-
 .knopka, .efect-btn { display: block; width: 200px; height: 50px; justify-content: center; text-align: center; margin: auto; border-radius: 4px;}
 
-.efect-btn { font-family: 'Roboto', sans-serif; font-weight: 700; font-style: normal; font-size: 16px; line-height: 30px; letter-spacing: 0.06em; align-items: center; color: var(--white-text); background-color: var(--background-btn); border-radius: 4px;}
+.efect-btn { font-family: 'Roboto', sans-serif; font-weight: 700; font-style: normal; font-size: 16px; line-height: 30px; letter-spacing: 0.06em; align-items: center; color: var(--white-text); background-color: var(--background-btn); border-radius: 4px; transform: background-color 250ms var(--cubik);}
 
-.knopka:hover, .knopka:focus, .efect-btn:hover, .efect-btn:focus {text-decoration: underline var(--blue-btn); border-radius: 4px solid var(--blue-btn); box-shadow: 0px 4px 4px 0px rgba (0, 0, 0, 0.15);}
+.knopka:hover, .knopka:focus, .efect-btn:hover, .efect-btn:focus { border-radius: 4px solid var(--blue-btn); box-shadow: 0px 4px 4px 0px rgba (0, 0, 0, 0.15); transition: background-color 250ms var(--cubik);}
 
 /*секция текст*/
 
@@ -130,8 +128,6 @@ img { display: block; max-width: 100%; height: auto;}
 
 .text-head { color: var(--black-text); font-weight: 700; font-style: normal; font-size: 36px;}
 
-.text-head:hover {text-decoration: underline var(--blue-logo);}
-
 .foto h2 { margin-left: 412px; margin-bottom: 50px;}
 
 .list-img { display: flex; padding-bottom: 94px;}
@@ -153,7 +149,7 @@ img { display: block; max-width: 100%; height: auto;}
 
 .class-h { padding-top: 94px; text-align: center; padding-bottom: 50px;}
 
-.set { display: flex; flex-wrap: wrap; flex-basis: calc(100% / 4 - 30px); justify-content: space-between; margin-left: -30px; padding-bottom: 94px;}
+.set { display: flex; flex-wrap: wrap; flex-basis: calc(100% / 4 - 30px); justify-content: space-between; padding-bottom: 94px;}
 
 .card { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 0px 0px 4px 4px; width: 270px;}
 
@@ -173,7 +169,7 @@ img { display: block; max-width: 100%; height: auto;}
 
 .icon-inet { display: flex; align-items: center; justify-content: center; width: 44px; height: 41.82px; cursor: pointer; transform: background-color 250ms var(--cubik), border-radius 250ms var(--cubik);}
 
-.icon-inet:hover, .icon-inet:focus {background: var(--blue-logo); border-radius: 50%;}
+.icon-inet:hover, .icon-inet:focus { background: var(--blue-logo); border-radius: 50%;}
 
 .icon-insta,
 .icon-twitter,
@@ -189,9 +185,11 @@ img { display: block; max-width: 100%; height: auto;}
 
 .client { font-weight: 700px; font-size: 36px; line-height: 42.19px; text-align: center; color: var(--black-text); padding-top: 29px;}
 
-.client-list { display: flex; justify-content: center; padding-top: 50px; padding-bottom: 80px;}
+.client-list { display: flex; justify-content: space-between; padding-top: 50px; padding-bottom: 80px;}
 
 .client-logo { margin-left: 30px; fill: var(--baskground-social-link); width: 170px; height: 90px; border: 1px solid var(--baskground-social-link); box-sizing: border-box; border-radius: 4px; transform: fill 250ms var(--cubik), border 250ms var(--cubik), border-radius 250ms var(--cubik);}
+
+.client-logo:first-child { margin-left: 0px;}
 
 .klient { display: flex; align-items: center; justify-content: center; width: 170px; height: 90px;}
 
@@ -241,10 +239,10 @@ footer { width: 100%; height: 252px; background-color: var(--background-head);}
 
 /*модальное окно*/
 
-.backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 1024px; background-color: rgba(0, 0, 0, 0.2);}
+.backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);}
 
 .backdrop.is-hidden { opacity: 0; pointer-events: none;}
 
-.modal { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 528px; min-height: 581px; background-color: var(--white-text); border-radius: 4px; box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);}
+.modal { position: absolute; display: flex; top: 50%; left: 50%; min-width: 528px; min-height: 581px; background-color: var(--white-text); border-radius: 4px; box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); transform: translate(-50%, -50%);}
 
-.icon-close {content: ""; position: absolute; display: flex; top: 9px; right: 8px; width: 30px; height: 30px; background-color: var(--white-text); border: 1px solid rgba(0, 0, 0, 0.1) ; border-radius: 50% 50%;}
+.icon-close {content: ""; position: absolute; display: flex; top: 9px; right: 8px; width: 30px; height: 30px; background-color: var(--white-text); border: 1px solid rgba(0, 0, 0, 0.1) ; border-radius: 50% 50%; transform: background-color 250ms var(--cubik);}
